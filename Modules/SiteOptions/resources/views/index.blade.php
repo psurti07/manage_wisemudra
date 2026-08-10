@@ -100,7 +100,7 @@
 
 
 
-<div class="container-fluid">
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <!-- Parent Card -->
@@ -251,7 +251,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection
 
 @push('script-src')

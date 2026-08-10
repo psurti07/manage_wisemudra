@@ -16,11 +16,11 @@ class SmsLogController extends Controller
         $todaySACount = OtpVerification::where('acc_type',1)->where('rec_date',date('Y-m-d'))->get()->count();
         $todayLACount = OtpVerification::where('acc_type',2)->where('rec_date',date('Y-m-d'))->get()->count();
 
-        $todaySASMStotal = SmsLog::where('parentid', 11)
+        $todaySASMSStotal = SmsLog::where('parentid', 11)
                             ->whereDate('rec_date', today())
                             ->where('cronname', 'like', '%SMS Day%')
                             ->sum('msgcount');
-        $todayLASMStotal = SmsLog::where('parentid', 12)
+        $todayLASMSStotal = SmsLog::where('parentid', 12)
                             ->whereDate('rec_date', today())
                             ->where('cronname', 'like', '%SMS Day%')
                             ->sum('msgcount');
@@ -34,7 +34,7 @@ class SmsLogController extends Controller
                             ->where('cronname', 'like', '%Whatsapp Day%')
                             ->sum('msgcount');
 
-        return view('statistics::smsLog',compact('todaySACount','todayLACount','todaySASMSStotal','todayLASMSStotal','todaySAWPPtotal','todayLAWPPtotal'));
+        return view('statistics::smsLog',compact('todaySACount','todayLACount','todaySASMSStotal','todayLASMSStotal','todaySAWPtotal','todayLAWPPtotal'));
     }
     
 }

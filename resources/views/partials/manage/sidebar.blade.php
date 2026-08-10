@@ -98,7 +98,7 @@
                                 </ul>
                             </li>
                         @endif
-                        @if(in_array(Auth::user()->role, [0,1,3,6,2]))
+                        {{-- @if(in_array(Auth::user()->role, [0,1,3,6,2]))
                             <li class="sidebar-list">
                                 <i class="fa fa-thumb-tack"></i>
                                 <a class="sidebar-link sidebar-title" href="javascript:;">
@@ -111,8 +111,8 @@
                                     <li><a href="{{ route('manage.statistics.loan.agent.staff.stats') }}">Staff Statistics</a></li>
                                 </ul>
                             </li>
-                        @endif
-                        @if(in_array(Auth::user()->role, [0,1,3,6,7]))
+                        @endif --}}
+                        {{-- @if(in_array(Auth::user()->role, [0,1,3,6,7]))
                         @if(false)
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
@@ -129,7 +129,7 @@
                             </a>
                         </li>
                         @endif
-                        @endif
+                        @endif --}}
                         @if(!in_array(Auth::user()->role, [5,2,7]))
                             <li class="sidebar-list">
                                 <i class="fa fa-thumb-tack"></i>
@@ -198,7 +198,7 @@
                             </li>
                         @endif
                     @endif
-                    @if(!in_array(Auth::user()->role, [4]))
+                    {{-- @if(!in_array(Auth::user()->role, [4]))
                         @if(in_array(Auth::user()->role, [0,1,3,6,2]))
                             <li class="sidebar-main-title">
                                 <div>
@@ -243,8 +243,8 @@
                                 </ul>
                             </li>
                         @endif
-                    @endif
-                    @if(false)
+                    @endif --}}
+                    {{-- @if(false)
                     <li class="sidebar-main-title">
                         <div>
                             <h6 class="">PROGRAM DETAIL</h6>
@@ -305,7 +305,7 @@
                         </a>
                     </li>
 
-                    @endif
+                    @endif --}}
                     @if(!in_array(Auth::user()->role, [4,7,2,5]))
                         <li class="sidebar-main-title">
                             <div>
@@ -376,7 +376,7 @@
                             </a>
                             <ul class="sidebar-submenu">
                                 <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'leads','acc_type'=>1]) }}">SelfApply Leads</a></li>
-                                <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'leads','acc_type'=>2]) }}">LoanAgent Leads</a></li>
+                                {{-- <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'leads','acc_type'=>2]) }}">LoanAgent Leads</a></li> --}}
                             </ul>
                         </li>
                         <li class="sidebar-list">
@@ -387,7 +387,7 @@
                             </a>
                             <ul class="sidebar-submenu">
                                 <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'customer','acc_type'=>1]) }}">SelfApply Customer</a></li>
-                                <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'customer','acc_type'=>2]) }}">LoanAgent Customer</a></li>
+                                {{-- <li><a href="{{ route('manage.reports.customers.leads.data',['type'=>'customer','acc_type'=>2]) }}">LoanAgent Customer</a></li> --}}
                             </ul>
                         </li>
                     @endif
@@ -593,7 +593,7 @@
                                 </a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="{{ route('manage.dnd.list',['type'=>'selfapply']) }}">Self Apply DND List</a></li>
-                                    <li><a href="{{ route('manage.dnd.list',['type'=>'loanagent']) }}">Loan Agent DND List</a></li>
+                                    {{-- <li><a href="{{ route('manage.dnd.list',['type'=>'loanagent']) }}">Loan Agent DND List</a></li> --}}
                                 </ul>
                             </li>
                         @endif
